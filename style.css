@@ -1,0 +1,335 @@
+/* General Styles */
+body {
+  background-color: #F3F4F6;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #000;
+  margin: 50px auto;
+}
+
+/* Flex Container */
+.flex-container {
+  display: flex;
+  flex-direction: row; /* Ensures sections are side-by-side */
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Add Section */
+section.Add {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1;
+  max-width: 35%;
+  height: 500px;
+  margin: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Add Section Header */
+section.Add h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+section.Add label {
+  font-weight: 600;
+  color: #000;
+  padding: 0 0 0 2px;
+  font-size: 1.125rem; /* 18px */
+}
+
+section.Add input,
+section.Add select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+section.Add input::placeholder {
+  color: #aaa;
+  font-size: 1rem; /* 16px */
+}
+
+/* Add Section Button */
+section.Add button.add {
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+section.Add button:hover {
+  background-color: #333;
+}
+
+/* Category and Date Row */
+section.Add .flex-row {
+  display: flex;
+  gap: 15px; /* Space between category and date */
+  align-items: flex-start; /* Align items to the top */
+}
+
+section.Add .flex-row .form-group {
+  flex: 1; /* Ensure both category and date share equal space */
+}
+
+section.Add .flex-row .form-group label {
+  display: block;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 5px;
+  font-size: 1.125rem; /* 18px */
+}
+
+section.Add .flex-row .form-group select,
+section.Add .flex-row .form-group input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Expense Group */
+.expense-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+  background-color: #F3F4F6;
+}
+
+.delete-button {
+  background-color: #ccc;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.total {
+  font-size: 1.125rem; /* 18px */
+  font-weight: bold;
+  text-align: right;
+  margin-top: 10px;
+  color: #000;
+}
+
+/* Container */
+.container {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pie-chart {
+  display: block;
+  margin: 15px auto;
+  width: 380px;
+  height: 380px;
+}
+
+#expensePieChart {
+  width: 100%;
+  height: 100%;
+}
+
+/* Table Container */
+.table-container {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.table-title {
+  font-size: 1.25rem; /* 20px */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1rem; /* 16px */
+  margin: 0 auto;
+}
+
+thead th {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+tbody td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.no-data {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  section.Add {
+    max-width: 100%;
+    margin: 50px;
+  }
+
+  table {
+    width: 90%;
+  }
+
+  .pie-chart {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .flex-container {
+    flex-direction: row;
+  }
+
+  section.Add {
+    max-width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1.75rem; /* 28px */
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  section.Add {
+    max-width: 100%;
+    height: auto;
+    margin: 0 50px 0 50px;
+  }
+
+  table {
+    width: 90%;
+  }
+
+  .pie-chart {
+    width: 60%;
+    height: auto;
+  }
+
+  .delete-button {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section.Add input,
+  section.Add select {
+    font-size: 0.9rem; /* 14px */
+    padding: 8px;
+  }
+
+  section.Add button.add {
+    font-size: 0.9rem; /* 14px */
+    padding: 8px;
+  }
+
+  section.Add {
+    max-width: 100%;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header h1 {
+    font-size: 1.2rem; /* 20px */
+  }
+
+  table {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .pie-chart {
+    width: 90%;
+    height: 300px;
+  }
+
+  .total {
+    font-size: 1rem; /* 16px */
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  legend {
+    position: right;
+  }
+}
