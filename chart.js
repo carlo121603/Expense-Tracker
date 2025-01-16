@@ -2,9 +2,9 @@ var ctx = document.getElementById('expensePieChart').getContext('2d');
 var expensePieChart = new Chart(ctx, {
     type: "doughnut",
     data: {
-        labels: categories, // PHP data
+        labels: categories, 
         datasets: [{
-            data: totals, // PHP data
+            data: totals, 
             backgroundColor: [
                 'rgba(255, 99, 132, 0.6)',
                 'rgba(54, 162, 235, 0.6)',
@@ -18,13 +18,13 @@ var expensePieChart = new Chart(ctx, {
     options: {
         plugins: {
             legend: {
-                position: 'top', // Move legend to the right
+                position: 'top', 
                 labels: {
                     font: {
-                        size: 16, // Increase font size
-                        weight: 'bold' // Make text bold
+                        size: 16, 
+                        weight: 'bold' 
                     },
-                    color: '#000' // Optional: Set text color to black
+                    color: '#000' 
                 }
             }
         }
